@@ -73,33 +73,21 @@
             <mainbody>
               <bodytext>
                 <h3>Situation of Concern</h3><br>
-      <p1> 200 Words Maximum... Sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper
-        porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque
-        nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet.
-        Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna
-        non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in
-        justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem.
+      <p1> The project focuses on improving the kitchen experience for visually impaired individuals. Specifically, the target users are blind individuals who once had vision but are now visually impaired. The target group lives in an average North American household shared with other tenants. The household consists of a normal kitchen and the users dislike common aids that would label them as blind individuals .The proposed solution uses existing technologies including a USB camera, Google Home, Google Assistant, and Tensorflow framework. In a nutshell, a user can ask Google Assistant, an interactive intelligent assistive system, for the location of an object. Google will fetch visual information from the camera, send it to a cloud-based service involving object recognition and location determination via a trained object detection model. Finally, inquiries are surfaced back to the user via the Google Home as audio feedback. All the technology needed to capture visual information, recognize and determine objects via computer vision, interpret speech commands, etc. is available but will be integrated and packaged together into a natural and empowering kitchen experience for the user.
       </p1><br><br><br>
 
-      <img src='_/img/SystemDiagram.png' alt='System Diagram'>
+      <img src='_/img/SystemDiagram.png' alt='System Diagram' width='1000'>
       <p2>System Diagram</p2><br><br><br>
 
       <h3>Why Does This Matter?</h3><br>
-      <p1> 100 Words Maximum: Sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper
-        porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque
-        nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor.
+      <p1> Fundamentally, MIRU is trying to create a social impact for visually impaired individuals. The goal of MIRU is to bridge the interaction between sighted friends and families and the visually impaired individual. A positive impact of MIRU is that it provides the visually impaired individual an autonomous level of situational and environmental awareness that was not available to them before, and at the same time, leverages a platform that can be used by others for other purposes. As well, there are currently no general solutions to this problem; it is an area that has not been thoroughly explored from the perspective of the user.
       </p1><br><br><br>
 
       <img src='_/img/FunctionalDiagram.png' alt='Fucntional Diagram of Solution' width='1000'>
       <p2>Functional Diagram</p2><br><br><br>
 
       <h3>Designed Solution</h3><br>
-      <p1> 200 Words Maximum... Sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper
-        porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque
-        nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet.
-        Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna
-        non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in
-        justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem.
+      <p1> The designed solution consists of a Google Home as the user interface and an    SSD Mobile-net object detection framework as the backend. The Google Home accepts a user’s speech request, converts the speech to text, and extracts the specified object of interest and intent from the request. If Google Home does not recognize the object it will respond to the user at this point. Otherwise, the object and intent is passed to the backend object detector component. The object detection framework analyzes the frame passed by the camera and returns a list of detected objects, bounding boxes for each of the boxes and their associated probabilities. These results from the neural net are used in conjunction with information about reference objects to build an allocentric response for the user. This response is passed back to the Google Home that relays an audio response back to the user.
       </p1><br><br><br>
 
       <img src='_/img/Prototype.png' alt='Prototyped Solution' width='1000'>
@@ -126,24 +114,6 @@
 
   <!-- this is where we put our custom functions -->
   <script src="_/js/functions.js"></script>
-
-  <!-- Asynchronous google analytics; this is the official snippet.
-         Replace UA-XXXXXX-XX with your site's ID and uncomment to enable.
-
-         <script>
-
-         var _gaq = _gaq || [];
-         _gaq.push(['_setAccount', 'UA-XXXXXX-XX']);
-         _gaq.push(['_trackPageview']);
-
-         (function() {
-         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-         })();
-
-         </script>
-         -->
 
 </body>
 
